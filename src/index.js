@@ -1,17 +1,50 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 
-const elem1 = React.createElement('span', { children: 'Привет' });
-const elem2 = React.createElement('span', { children: 'мир' });
+// const elem1 = React.createElement('span', { children: 'Привет' });
+// const elem2 = React.createElement('span', { children: 'мир' });
+// const element = React.createElement('div', {
+//   a: 5,
+//   b: 10,
+//   children: [elem1,' ',elem2],
+// });
+// ReactDOM.render(element, document.querySelector('#root'));
 
-const element = React.createElement('div', {
-  a: 5,
-  b: 10,
-  children: [elem1,' ',elem2],
-});
 
-console.log(element);
-ReactDOM.render(element, document.querySelector('#root'));
+// const elem1 = <span>Привет</span>;
+// const elem2 = <span>мир</span>;
+// const element = (
+//   < div >
+//   { elem1 }
+//   { elem2 }
+//   </div >);
+  
+// console.log(element);
+
+// ***************************************************************
+
+import App from './App';
+
+
+  
+ReactDOM.render(<App/>,document.querySelector('#root'));
+// ***************************************************************
+// ***************************************************************
+// ***************************************************************
+// ***************************************************************
+// ***************************************************************
+// ***************************************************************
+// ***************************************************************
+
+
+
+
+
+
+
+
+
+
+
 
 // =================================================
 // import React from 'react';
