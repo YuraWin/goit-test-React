@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import defaultImage from './default.jpg'
 
 export default function Painting({ imageUrl =defaultImage, title, profileUrl, author = 'не известен', price }) {
@@ -11,4 +12,12 @@ export default function Painting({ imageUrl =defaultImage, title, profileUrl, au
         <button type="button">Добавить в корзину</button>
     </div>
     );
+}
+
+Painting.propTypes= {
+    imadeUrl: PropTypes.string,
+    title: PropTypes.string,
+    profileUrl: PropTypes.string,
+    author: PropTypes.string,
+    price:PropTypes.number,
 }
