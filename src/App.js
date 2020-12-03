@@ -13,5 +13,20 @@ export default function App() {
         price={paintings[0].price}
       /> 
      
+     <Painting
+        imageUrl={paintings[1].url}
+        title={paintings[1].title}
+        author={paintings[1].author.tag}
+        profileUrl={paintings[1].author.url}
+        price={paintings[1].price}
+      /> 
+
+      <Painting
+        imageUrl={paintings[2].url}
+        title={paintings[2].title}
+        author={paintings[2].author.tag}
+        profileUrl={paintings[2].author.url}
+        price={paintings[2].price}
+      /> 
     </div>)
 }
