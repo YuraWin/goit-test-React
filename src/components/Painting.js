@@ -1,23 +1,33 @@
 import PropTypes from 'prop-types';
-import defaultImage from './default.jpg'
+import defaultImage from './default.jpg';
 
-export default function Painting({ imageUrl =defaultImage, title, profileUrl, author = 'не известен', price }) {
-    return (
+export default function Painting({
+  imageUrl = defaultImage,
+  title,
+  profileUrl,
+  author = 'не известен',
+  price,
+  quantity,
+}) {
+  return (
     <div>
-        <img src={imageUrl} alt={title} width="480" />
-        <h2>{title}</h2>
-        <p>Автор: <a href={profileUrl}>{author}</a></p>
-        <p>Цена: {price} кредитов</p>
-        <p>Доступность: заканчивается или есть в наличии</p>
-        <button type="button">Добавить в корзину</button>
+      <img src={imageUrl} alt={title} width="480" />
+      <h2>{title}</h2>
+      <p>
+        Автор: <a href={profileUrl}>{author}</a>
+      </p>
+      <p>Цена: {price} кредитов</p>
+      <p>Доступность: {quantity > 5 ? 'есть в наличии' : 'заканчивается'}</p>
+      <button type="button">Добавить в корзину</button>
     </div>
-    );
+  );
 }
 
-Painting.propTypes= {
-    imadeUrl: PropTypes.string,
-    title: PropTypes.string,
-    profileUrl: PropTypes.string,
-    author: PropTypes.string,
-    price:PropTypes.number,
-}
+Painting.propTypes = {
+  imageUrl: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  profileUrl: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  quantity: PropTypes.number.isRequired,
+};
